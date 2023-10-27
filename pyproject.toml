@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "postgres_da_ai_agent"
+version = "0.1.0"
+description = ""
+authors = ["tejapalivela <tejanagamohan@gmail.com>"]
+readme = "README.md"
+packages=[{include="postgres_da_ai_agent"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.28.1"
+psycopg2-binary = "^2.9.9"
+argparse = "^1.4.0"
+python-dotenv = "^1.0.0"
+pyautogen = "^0.1.13"
+transformers = "^4.34.1"
+tiktoken = "^0.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+start="postgres_da_ai_agent.main:main"
